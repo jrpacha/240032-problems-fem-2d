@@ -1,4 +1,4 @@
-# 240032_problemsFEM2D
+# 240032 Problems FEM 2D
 Some Worked examples on 2D-FEM. See FEM Introduction Course at  Toni Susin's Numerical Factory 
 
 https://numfactory.upc.edu/web/FiniteElements.html
