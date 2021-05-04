@@ -9,7 +9,7 @@ https://numfactory.upc.edu/web/FiniteElements.html
 * Examen Final 2016-17 Quad2 **Problema 4**. `Ex_Final_Q2-2016-17_Problema4.pdf` 
   * **Fe d'errors:**  A la figura amb els nodes locals (on el nodes globals estan marcats en vermell) hi ha un error. El segon node local de l'element 2
   hauria d'estar a l'angle recte del triangle i llavors els nodes 1 i 3 es posarien de manera que 1,2,3 anessin en sentit anti-horari. No afecta el càlcul
-  de les components de la K (matriu de rigidesa global). En canvi, al càlcul de F<sub>4</sub>, on posa $F^{2}_{3}$ F<sup>2</sup><sub>3</sub> (3a. component del vector
+  de les components de la K (matriu de rigidesa global). En canvi, al càlcul de F<sub>4</sub>, on posa F<sup>2</sup><sub>3</sub> (3a. component del vector
   de forces del 2on. element) hauria de posar F<sup>2</sup><sub>1</sub> (1a. component del vector forces del 2on. element). El resultat per F<sub>4</sub>
   òbviament no canvia: F<sub>4</sub> = 5/3. Nota: això ja està corregit a la versió actual 
 * Examen Re-Avaluació 2016-17 **Problema 4**. `Ex_ReAvaluacio-2016-17_Problema4.pdf`
