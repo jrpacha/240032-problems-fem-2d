@@ -16,9 +16,11 @@ https://numfactory.upc.edu/web/FiniteElements.html
 * Examen Final 20 de Gener de 2016. **Problema 2**. `Examen_20_Gener_2016_Problema2.pdf`
 * Examen Final 20 de Gener de 2016. **Problema 3**. `Examen_20_Gener_2016_Problema3.pdf`
 * Examen Final 2017-18 Quad1 **Problema 4**. `Ex_Final_Q1-2017-18_Problema4.pdf`
+* Examen Final 2017-18 Quad2 **Problema 2**. `Ex_Final_Q1-2017-18_Problema2.pdf`
+* Examen Re-Avaluació 2017-18 **Problema 2**. `Ex_ReAvaluacio-2017-18_Problema2.pdf`
 * Examen Final 2018-19 Quad1 **Problema 2**. `Ex_Final_Q1-2018-19_Problema2.pdf`
 * Examen Final 2018-19 Quad2 **Problema 2**. `Ex_Final_Q2-2018-19_Problema2.pdf`
-* Examen Re-Avaluació 2018-19 **Problema 2**. `Ex_ReAvaluacio-2019-19_Problema2.pdf`
+* Examen Re-Avaluació 2018-19 **Problema 2**. `Ex_ReAvaluacio-2018-19_Problema2.pdf`
 * Examen Final 2019-20 Quad1 **Problema 2**. `Ex_Final_Q2-2019-20_Problema2.pdf`
 * Examen Final 2019-20 Quad2 **Problema T4**. `Ex_Final_Q2-2019-20_ProblemaT4.pdf`
 
