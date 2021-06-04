@@ -24,6 +24,11 @@ https://numfactory.upc.edu/web/FiniteElements.html
 * Examen Final 2019-20 Quad1 **Problema 2**. `Ex_Final_Q2-2019-20_Problema2.pdf`
 * Examen Final 2019-20 Quad2 **Problema T4**. `Ex_Final_Q2-2019-20_ProblemaT4.pdf`
 
+Moreover,
+* T2-MN-FEM2D.pdf. Author: prof. Toni Susin. This is the notes' original version 
+ as they first uploaded at the _Numerical Factory_. The page numbers for the
+ formulas referred in the problems' solutions are those in this document. 
+
 All exercises are completely solved and explained.
 
 **Disclaimer:** this stuff is provided 'as is'. Please, check it (just in case you find it useful), but it's worth you try to write all the programs and do the exercises on your own.
