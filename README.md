@@ -24,8 +24,8 @@ Moreover,
  formulas referred in the problems' solutions are those in this document. 
 
 * Plane Elasticity. Meshing with linear triangular elements. An example with 2 Triangles. 
-  `planarElasticity2Triangles.pdf`. See, at the same web, the presentation 
-  https://numfactory.upc.edu/web/FiniteElements/Guions/T4-MN-StructuralFEM2D.pdf, page 36
+  `planeStress2Triang.pdf`. See, at the same web, the presentation 
+  https://numfactory.upc.edu/web/FiniteElements/Guions/T4-MN-StructuralFEM2D.pdf, page 39
 
 All exercises are completely solved and explained.
 
