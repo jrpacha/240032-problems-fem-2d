@@ -1,5 +1,5 @@
 # 240032 Problems FEM 2D
-Some Worked examples on 2D-FEM. See FEM Introduction Course at  Toni Susin's Numerical Factory 
+Some Worked examples on 2D-FEM. See FEM Introduction Course at prof. Antonio Susin's Numerical Factory 
 https://numfactory.upc.edu/web/FiniteElements.html
 
 * Examen Final 20 de Gener de 2016. **Problema 1**. `Examen_20_Gener_2016_Problema1.pdf`
