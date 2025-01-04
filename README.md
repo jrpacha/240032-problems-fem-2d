@@ -17,6 +17,10 @@ https://numfactory.upc.edu/web/FiniteElements.html
 * Examen Final 2019-20 Quad1 **Problema 2**. `Ex_Final_Q2-2019-20_Problema2.pdf`
 * Examen Final 2019-20 Quad2 **Problema 4**. `Ex_Final_Q2-2019-20_Problema4.pdf`
 * Examen Final 2021-22 Quad1 **Problema 2**. `Ex_Final_Q1-2021-22_Problema2.pdf`
+* Examen Final 2023-24 Quad1 **Problema 2**.
+    `Ex_Final_Q1_2023_24_Problema2.mlx`
+* Examen Re-Avaluació 2023-24 **Problema 1**.
+    `Ex_ReAvaluacio_2023_24_Problema1.mlx`
 
 Moreover,
 * T2-MN-FEM2D.pdf. Author: prof. Toni Susin. This is the notes' original version 
