@@ -108,11 +108,11 @@ fprintf('(a) K1(1,1) = %.2f\n', Ke(1,1))
 
 It is clear from the figure that the local stiffness matrices are all aqual to $K^1$ , i.e., $K^e =K^1$ for $e=2,3,4,5,6$ . We can compute the whole stiffness matrix:
 
- $$ \begin{array}{rcl} K & = & \left(\begin{array}{ccccccc} K_{3,3}^1 +K_{2,2}^2 +K_{1,1}^3 +K_{3,3}^4 +K_{2,2}^5 +K_{1,1}^6  & K_{3,1}^1 +K_{1,3}^6  & K_{3,2}^1 +K_{2,3}^2  & K_{2,1}^2 +K_{1,2}^3  & K_{1,3}^3 +K_{3,1}^4  & K_{3,2}^4 +K_{2,3}^5  & K_{2,1}^5 +K_{1,2}^6 \newline K_{1,3}^1 +K_{3,1}^6  & K_{1,1}^1 +K_{3,3}^6  & K_{1,2}^1  & 0 & 0 & 0 & K_{3,2}^6 \newline K_{2,3}^1 +K_{3,2}^2  & K_{2,1}^1  & K_{2,2}^1 +K_{3,3}^2  & K_{3,1}^2  & 0 & 0 & 0\newline K_{1,2}^2 +K_{2,1}^3  & 0 & K_{1,3}^2  & K_{1,1}^2 +K_{2,2}^3  & K_{2,3}^3  & 0 & 0\newline K_{3,1}^3 +K_{1,3}^4  & 0 & 0 & K_{3,2}^3  & K_{3,3}^3 +K_{1,1}^4  & K_{1,2}^4  & 0\newline K_{2,3}^4 +K_{3,2}^5  & 0 & 0 & 0 & K_{2,1}^4  & K_{2,2}^4 +K_{3,3}^5  & K_{3,1}^5 \newline K_{1,2}^5 +K_{2,1}^6  & K_{2,3}^6  & 0 & 0 & 0 & K_{1,3}^5  & K_{1,1}^5 +K_{2,2}^6  \end{array}\right)\\
+ $ $ \begin{array}{rcl} K & = & \left(\begin{array}{ccccccc} K_{3,3}^1 +K_{2,2}^2 +K_{1,1}^3 +K_{3,3}^4 +K_{2,2}^5 +K_{1,1}^6  & K_{3,1}^1 +K_{1,3}^6  & K_{3,2}^1 +K_{2,3}^2  & K_{2,1}^2 +K_{1,2}^3  & K_{1,3}^3 +K_{3,1}^4  & K_{3,2}^4 +K_{2,3}^5  & K_{2,1}^5 +K_{1,2}^6 \newline K_{1,3}^1 +K_{3,1}^6  & K_{1,1}^1 +K_{3,3}^6  & K_{1,2}^1  & 0 & 0 & 0 & K_{3,2}^6 \newline K_{2,3}^1 +K_{3,2}^2  & K_{2,1}^1  & K_{2,2}^1 +K_{3,3}^2  & K_{3,1}^2  & 0 & 0 & 0\newline K_{1,2}^2 +K_{2,1}^3  & 0 & K_{1,3}^2  & K_{1,1}^2 +K_{2,2}^3  & K_{2,3}^3  & 0 & 0\newline K_{3,1}^3 +K_{1,3}^4  & 0 & 0 & K_{3,2}^3  & K_{3,3}^3 +K_{1,1}^4  & K_{1,2}^4  & 0\newline K_{2,3}^4 +K_{3,2}^5  & 0 & 0 & 0 & K_{2,1}^4  & K_{2,2}^4 +K_{3,3}^5  & K_{3,1}^5 \newline K_{1,2}^5 +K_{2,1}^6  & K_{2,3}^6  & 0 & 0 & 0 & K_{1,3}^5  & K_{1,1}^5 +K_{2,2}^6  \end{array}\right)\\
  & = & \left(\begin{array}{ccccccc} 44 & 0 & -11 & -11 & 0 & -11 & -11\newline 0 & 11 & -11/2 & 0 & 0 & 0 & -11/2\newline -11 & -11/2 & 33/2 & 0 & 0 & 0 & 0\newline -11 & 0 & 0 & 33/2 & -11/2 & 0 & 0\newline 0 & 0 & 0 & -11/2 & 11 & -11/2 & 0\newline -11 & 0 & 0 & 0 & -11/2 & 33/2 & 0\newline -11 & -11/2 & 0 & 0 & 0 & 0 & 33/2 \end{array}\right).
-\end{array} $$ 
+\end{array} $ $ 
 
-However, we recall that we're only asked for the component $K_{1,1}$ component of the global (i.e., the assembled) stiffness matrix. Hence,
+However, we recall that we're only asked for the $K_{1,1}$ component of the global (i.e., the assembled) stiffness matrix. Hence,
 
  $$ K_{1,1} =K_{3,3}^1 +K_{2,2}^2 +K_{1,1}^3 +K_{3,3}^4 +K_{2,2}^5 +K_{1,1}^6 =\frac{11}{2}+11+\frac{11}{2}+\frac{11}{2}+11+\frac{11}{2}=22+22=44. $$ 
 
@@ -173,7 +173,7 @@ As node $1$ is the only free node, the reduced system is derived straight from t
 
  $$ K_{1,1} U_1 =F_1 +Q_1 -K_{1,2} U_2 -K_{1,3} U_3 -K_{1,4} U_4 -K_{1,5} U_5 -K_{16} U_6 -K_{1,7} U_7 $$ 
 
-and note that the natural B.C. reduces to $Q_1 =0$ , for this is an internal node, and flux cancelllation applies. Substitution of $K_{1,1} =44$ , $K_{1,2} =0$ , $K_{1,3} =-11$ , $K_{1,4} =-11$ , $K_{1,5} =0$ , $K_{1,6} =-11$ , $K_{1,7} =-11$ ; $U_2 =U_3 =U_4 =U_5 =U_6 =U_7 =7$ ; $F_1 =5/2$ ; $Q_1 =0$ , gives the equation
+and note that the natural B.C. reduces to $Q_1 =0$ , for this is an internal node, and flux cancellation applies. Substitution of $K_{1,1} =44$ , $K_{1,2} =0$ , $K_{1,3} =-11$ , $K_{1,4} =-11$ , $K_{1,5} =0$ , $K_{1,6} =-11$ , $K_{1,7} =-11$ ; $U_2 =U_3 =U_4 =U_5 =U_6 =U_7 =7$ ; $F_1 =5/2$ ; $Q_1 =0$ , gives the equation
 
 
  $44U_1 =5/2+0-0\times 7-11\times 7-11\times 7-0\times 7-11\times 7-11\times 7=\frac{5}{2}+44\times 7$ ,
@@ -182,7 +182,7 @@ and note that the natural B.C. reduces to $Q_1 =0$ , for this is an internal nod
 which yields
 
 
- $U_1 =\frac{5}{88}+7=\frac{621}{18}=7.056\overline{81}$ .
+ $U_1 =\frac{5}{88}+7=\frac{621}{88}=7.056\overline{81}$ .
 
 ```matlab
 fixedNods = [2,3,4,5,6,7];
