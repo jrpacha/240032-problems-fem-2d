@@ -157,13 +157,13 @@ First we shall assemble the local force vectors. To compute the local force vect
 
  $$ F^e  =\frac{f^e ab}{6}\left(\begin{array}{c} 1\newline 1\newline 1 \end{array}\right), $$ 
 
-with $f^e =5$ for $e=1,2,3,4,5,6$ ; $a=b=\frac{\sqrt{2}}{2}$, so 
+with $f^e =5$ for $e=1,2,3,4,5,6$; $a=b=\frac{\sqrt{2}}{2}$, so 
 
-$$F^{e} =\frac{5}{12}\left(\begin{array}{c} 1\newline 1\newline 1 \end{array}\right)$$,
+ $$ F^{e} = \frac{5}{12}\left(\begin{array}{c} 1\newline 1\newline 1 \end{array}\right), $$
 
 $e=1,2,3,4,5,6$. Then,
 
-$$F=\left(\begin{array}{c} F_1 \newline F_2 \newline F_3 \newline F_4 \newline F_5 \newline F_6  \end{array}\right)=\left(\begin{array}{c} F_3^1 +F_2^2 +F_1^3 +F_3^4 +F_2^5 +F_1^6 \newline F_1^1 +F_3^6 \newline F_2^1 +F_3^2 \newline F_1^2 +F_2^3 \newline F_3^3 +F_1^4 \newline F_2^4 +F_3^5 \newline F_1^5 +F_2^6  \end{array}\right)=\frac{5}{6}\left(\begin{array}{c} 3\newline 1\newline 1\newline 1\newline 1\newline 1\newline 1 \end{array}\right).$$
+$$ F=\left(\begin{array}{c} F_1 \newline F_2 \newline F_3 \newline F_4 \newline F_5 \newline F_6  \end{array}\right)=\left(\begin{array}{c} F_3^1 +F_2^2 +F_1^3 +F_3^4 +F_2^5 +F_1^6 \newline F_1^1 +F_3^6 \newline F_2^1 +F_3^2 \newline F_1^2 +F_2^3 \newline F_3^3 +F_1^4 \newline F_2^4 +F_3^5 \newline F_1^5 +F_2^6  \end{array}\right)=\frac{5}{6}\left(\begin{array}{c} 3\newline 1\newline 1\newline 1\newline 1\newline 1\newline 1 \end{array}\right). $$
 
 
 Note that, actually, we need only the first component of $F$ , i.e.,
