@@ -157,7 +157,7 @@ First we shall assemble the local force vectors. To compute the local force vect
 
  $$ F^e  =\frac{f^e ab}{6}\left(\begin{array}{c} 1\newline 1\newline 1 \end{array}\right), $$ 
 
-with $f^e =5$ for $e=1,2,3,4,5,6$ ; $a=b=\frac{\sqrt{2}}{2}$ , so $F^e =\frac{5}{12}\left(\begin{array}{c} 1\\ 1\\ 1 \end{array}\right)$, $e=1,2,3,4,5,6$ . Then,
+with $f^e =5$ for $e=1,2,3,4,5,6$ ; $a=b=\frac{\sqrt{2}}{2}$ , so $$F^e =\frac{5}{12}\left(\begin{array}{c} 1\newline 1\newline 1 \end{array}\right)$, $e=1,2,3,4,5,6$$. Then,
 
  $$F=\left(\begin{array}{c} F_1 \newline F_2 \newline F_3 \newline F_4 \newline F_5 \newline F_6  \end{array}\right)=\left(\begin{array}{c} F_3^1 +F_2^2 +F_1^3 +F_3^4 +F_2^5 +F_1^6 \newline F_1^1 +F_3^6 \newline F_2^1 +F_3^2 \newline F_1^2 +F_2^3 \newline F_3^3 +F_1^4 \newline F_2^4 +F_3^5 \newline F_1^5 +F_2^6  \end{array}\right)=\frac{5}{6}\left(\begin{array}{c} 3\newline 1\newline 1\newline 1\newline 1\newline 1\newline 1 \end{array}\right).$$
 
@@ -181,7 +181,7 @@ and note that the natural B.C. reduces to $Q_1 =0$ , for this is an internal nod
 which yields
 
 
- $U_1 =\frac{5}{88}+7=\frac{621}{88}=7.056\overline{81}$ .
+ $$U_1 =\frac{5}{88}+7=\frac{621}{88}=7.056\overline{81}$$.
 
 ```matlab
 fixedNods = [2,3,4,5,6,7];
@@ -224,13 +224,13 @@ fprintf('(c) U(1) = %.12f\n',u(1))
 -  $q_{n,1}^1 \equiv 0$ on $\Gamma_1^1$ (edge 2\-3), so $Q_{2,1}^1 =0$ . 
 -  $Q_{3,3}^2 =h_3^2 \left(\frac{1}{3}q_{n,3}^2 (1/2,1/2)+\frac{1}{6}q_{n,3}^2 (-1/2,1/2)\right)=1\cdot \left(\frac{1}{3}\times \frac{33}{2}+\frac{1}{6}\times \frac{11}{2}\right)=\frac{11}{2}\left(1+\frac{1}{6}\right)=\frac{77}{12}$ . Since $h_3^2 =1$ , $c=11$ , and: 
 
- $q_{n,3}^2 \left(\frac{1}{2},\frac{1}{2}\right)=\left\langle c\left(\begin{array}{c} \frac{\partial u}{\partial x}\left(\frac{1}{2},\frac{1}{2}\right)\newline \frac{\partial u}{\partial y}\left(\frac{1}{2},\frac{1}{2}\right) \end{array}\right),\left(\begin{array}{c} 0\newline 1 \end{array}\right)\right\rangle =c\frac{\partial u}{\partial y}\left(\frac{1}{2},\frac{1}{2}\right)=c\left(1+\frac{1}{2}\right)=11\times \frac{3}{2}=\frac{33}{2}$ ,
+ $$q_{n,3}^2 \left(\frac{1}{2},\frac{1}{2}\right)=\left\langle c\left(\begin{array}{c} \frac{\partial u}{\partial x}\left(\frac{1}{2},\frac{1}{2}\right)\newline \frac{\partial u}{\partial y}\left(\frac{1}{2},\frac{1}{2}\right) \end{array}\right),\left(\begin{array}{c} 0\newline 1 \end{array}\right)\right\rangle =c\frac{\partial u}{\partial y}\left(\frac{1}{2},\frac{1}{2}\right)=c\left(1+\frac{1}{2}\right)=11\times \frac{3}{2}=\frac{33}{2},$$
 
 
 and
 
 
- $q_{n,3}^2 \left(-\frac{1}{2},\frac{1}{2}\right)=\left\langle c\left(\begin{array}{c} \frac{\partial u}{\partial x}\left(-\frac{1}{2},\frac{1}{2}\right)\newline \frac{\partial u}{\partial y}\left(-\frac{1}{2},\frac{1}{2}\right) \end{array}\right),\left(\begin{array}{c} 0\newline 1 \end{array}\right)\right\rangle =c\frac{\partial u}{\partial y}\left(-\frac{1}{2},\frac{1}{2}\right)=c\left(1-\frac{1}{2}\right)=\frac{11}{2}$ .
+ $$q_{n,3}^2 \left(-\frac{1}{2},\frac{1}{2}\right)=\left\langle c\left(\begin{array}{c} \frac{\partial u}{\partial x}\left(-\frac{1}{2},\frac{1}{2}\right)\newline \frac{\partial u}{\partial y}\left(-\frac{1}{2},\frac{1}{2}\right) \end{array}\right),\left(\begin{array}{c} 0\newline 1 \end{array}\right)\right\rangle =c\frac{\partial u}{\partial y}\left(-\frac{1}{2},\frac{1}{2}\right)=c\left(1-\frac{1}{2}\right)=\frac{11}{2}.$$
 
 
 Therefore,
