@@ -36,7 +36,7 @@ Taking into account the edges' lengths told in the  the text and the connectivit
 Here $k=1$ is the number of the element, the length of the edge joining the local nodes $1$ and $2$ is $a=5$ , the length of the edge joining the local nodes $2$ and $3$ is $b=1$ , $a_{1,1}^1 =a_{2,2}^1 =c=30$ , $a_{1,2}^1 =a_{2,1}^1 =a_{0,0}^1 =0$ . Hence $K^{1,12} =K^{1,21} =K^{1,00} =0$ and then
 
  $$ 
- K^1 =K^{1,11} +K^{1,22} =\left(\begin{array}{rrrr} 2 & -2 & -1 & 1\\ -2 & 2 & 1 & -1\\ -1 & 1 & 2 & -2\\ 1 & -1 & -2 & 2 \end{array}\right)+25\left(\begin{array}{rrrr} 2 & 1 & -1 & -2\\ 1 & 2 & -2 & -1\\ -1 & -2 & 2 & 1\\ -2 & -1 & 1 & 2 \end{array}\right)=\left(\begin{array}{rrrr} 52 & 23 & -26 & -49\\ 23 & 52 & -49 & -26\\ -26 & -49 & 52 & 23\\ -49 & -26 & 23 & 52 \end{array}\right) 
+ K^1 =K^{1,11} +K^{1,22} =\left(\begin{array}{rrrr} 2 & -2 & -1 & 1\\\\ -2 & 2 & 1 & -1\\\\ -1 & 1 & 2 & -2\\\\ 1 & -1 & -2 & 2 \end{array}\right)+25\left(\begin{array}{rrrr} 2 & 1 & -1 & -2\\\\ 1 & 2 & -2 & -1\\\\ -1 & -2 & 2 & 1\\\\ -2 & -1 & 1 & 2 \end{array}\right)=\left(\begin{array}{rrrr} 52 & 23 & -26 & -49\\\\ 23 & 52 & -49 & -26\\\\ -26 & -49 & 52 & 23\\\\ -49 & -26 & 23 & 52 \end{array}\right) 
  $$ 
 
 To compute the local stiffness matrix of $\Omega^2$ , we can use the explicit formula that apply when the element $\Omega^k$ is a right triangle, with local node $2$ placed at the right angle's vertex (see figure below) and the coefficients of the model equation are constants and equal to $a_{1,1}^k =a_{2,2}^k =c$ , $a_{1,2}^k =a_{2,1}^k =a_{0,0}^k =0$ . This formula has been discussed in class and can be found [in the notes of the FEM available at the *Numerical Factory*](https://numfactory.upc.edu/numfactory/subjects/FEM/FEM/theory/T2-MN-FEM2D.pdf), page 28:
@@ -47,7 +47,7 @@ To compute the local stiffness matrix of $\Omega^2$ , we can use the explicit fo
 
 Here $k=2$ is the number of the element, the length of the edge joining the local nodes $1$ and $2$ is $a=3$ , the length of the edge joining the nodes $2$ and $3$ is $b=1$ (see the sketch of the meshed domain above, and note also that the local node $2$ is at the right angle's vertex), and $c=48$ 
 
- $$ K^2 =\left(\begin{array}{rrr} 32 & -32 & 0\\ -32 & 50 & -18\\ 0 & -18 & 18 \end{array}\right) $$ 
+ $$ K^2 =\left(\begin{array}{rrr} 32 & -32 & 0\\\\ -32 & 50 & -18\\\\ 0 & -18 & 18 \end{array}\right) $$ 
 
 Therefore, the solution of part (a) is: $K_{2,3}^1 =-49$ , $k_{1,2}^2 =-32$ .
 
@@ -124,16 +124,16 @@ The global assembled matrix is:
 
 
  $$
- K=\left(\begin{array}{ccccc} K_{1,1}^1  & K_{1,2}^1  & K_{1,3}^1  & 0 & K_{1,4}^1 \\ 
- K_{2,1}^1  & K_{2,2}^1  & K_{2,3}^1  & 0 & K_{2,4}^1 \\
- K_{3,1}^1  & K_{3,2}^1  & K_{3,3}^1 +K_{1,1}^2  & K_{1,2}^2  & K_{3,4}^1 +K_{1,3}^2 \\
- 0 & 0 & K_{2,1}^2  & K_{2,2}^2  & K_{2,3}^2 \\ 
+ K=\left(\begin{array}{ccccc} K_{1,1}^1  & K_{1,2}^1  & K_{1,3}^1  & 0 & K_{1,4}^1 \\\\
+ K_{2,1}^1  & K_{2,2}^1  & K_{2,3}^1  & 0 & K_{2,4}^1 \\\\
+ K_{3,1}^1  & K_{3,2}^1  & K_{3,3}^1 +K_{1,1}^2  & K_{1,2}^2  & K_{3,4}^1 +K_{1,3}^2 \\\\
+ 0 & 0 & K_{2,1}^2  & K_{2,2}^2  & K_{2,3}^2 \\\\ 
  K_{4,1}^1  & K_{4,2}^1  & K_{4,3}^1 +K_{3,1}^2  & K_{3,2}^2  & K_{4,4}^1 +K_{3,3}^2  
- \end{array}\right)=
- \left(\begin{array}{rrrrr} 52 & 23 & -26 & 0 & -49\\
- 23 & 52 & -49 & 0 & -26\\
- -26 & -49 & 84 & -32 & 23\\ 
- 0 & 0 & -32 & 50 & -18\\
+ \end{array}\right) =
+ \left(\begin{array}{rrrrr} 52 & 23 & -26 & 0 & -49\\\\
+ 23 & 52 & -49 & 0 & -26\\\\
+ -26 & -49 & 84 & -32 & 23\\\\ 
+ 0 & 0 & -32 & 50 & -18\\\\
  -49 & -26 & 23 & -18 & 70 
  \end{array}\right)
  $$ .
