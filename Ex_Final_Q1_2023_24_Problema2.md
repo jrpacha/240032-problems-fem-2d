@@ -2,7 +2,7 @@
 # 240032\-24\-ex\-final\-q1\-2023\-24
 # P2
 
-Consider the equation $-c\Delta u=0$ on the domain $\mathcal{D}=\Omega^1 \cup \Omega^2$ meshed with two elements and connectivity matrix $C=\left(\begin{array}{cccc} 1 & 2 & 3 & 5\newline 3 & 4 & 5 & \ast  \end{array}\right)$ . $\Omega^1$ is a rectangle with node $1$ in $(0,0)$ , whose edge 1\-2 lies in the $OX$ axis. Edge 1\-2 of length $5$ and edge 2\-3 of length $1$ . $\Omega^2$ is a right triangle with edge 3\-4 of length $3$ and edge 4\-5 of length $4$ . The value of $c$ is $30$ in $\Omega^1$ and $48$ in $\Omega^2$ .
+Consider the equation $-c\Delta u=0$ on the domain $\mathcal{D}=\Omega^1 \cup \Omega^2$ meshed with two elements and connectivity matrix $C=\left(\begin{array}{cccc} 1 & 2 & 3 & 5\\ 3 & 4 & 5 & \ast  \end{array}\right)$ . $\Omega^1$ is a rectangle with node $1$ in $(0,0)$ , whose edge 1\-2 lies in the $OX$ axis. Edge 1\-2 of length $5$ and edge 2\-3 of length $1$ . $\Omega^2$ is a right triangle with edge 3\-4 of length $3$ and edge 4\-5 of length $4$ . The value of $c$ is $30$ in $\Omega^1$ and $48$ in $\Omega^2$ .
 
 
  **Hint.** Due to the shape of the elements, there is no need to compute the nodes' coordinates.
@@ -18,7 +18,7 @@ Consider the equation $-c\Delta u=0$ on the domain $\mathcal{D}=\Omega^1 \cup \O
 -  $-49$ and $-32$ ✅ 
 ### Solution
 
-Taking into account the edges' lengths told in the  the text and the connectivity matrix, $C=\left(\begin{array}{cccc} 1 & 2 & 3 & 5\newline 3 & 4 & 5 & \ast  \end{array}\right)$ , we can sketch the tilling of the domain $\mathcal{D}$ into the elements $\Omega^1$ (rectangle) and $\Omega^2$ (right  triangle), as shown in the figure below.
+Taking into account the edges' lengths told in the  the text and the connectivity matrix, $C=\left(\begin{array}{cccc} 1 & 2 & 3 & 5\\ 3 & 4 & 5 & \ast  \end{array}\right)$ , we can sketch the tilling of the domain $\mathcal{D}$ into the elements $\Omega^1$ (rectangle) and $\Omega^2$ (right  triangle), as shown in the figure below.
 
 
 ![image_0.png](Ex_Final_Q1_2023_24_Problema2_media/image_0.png)
@@ -35,7 +35,9 @@ Taking into account the edges' lengths told in the  the text and the connectivit
 
 Here $k=1$ is the number of the element, the length of the edge joining the local nodes $1$ and $2$ is $a=5$ , the length of the edge joining the local nodes $2$ and $3$ is $b=1$ , $a_{1,1}^1 =a_{2,2}^1 =c=30$ , $a_{1,2}^1 =a_{2,1}^1 =a_{0,0}^1 =0$ . Hence $K^{1,12} =K^{1,21} =K^{1,00} =0$ and then
 
- $$ K^1 =K^{1,11} +K^{1,22} =\left(\begin{array}{rrrr} 2 & -2 & -1 & 1\\ -2 & 2 & 1 & -1\\ -1 & 1 & 2 & -2\\ 1 & -1 & -2 & 2 \end{array}\right)+25\left(\begin{array}{rrrr} 2 & 1 & -1 & -2\\ 1 & 2 & -2 & -1\newline -1 & -2 & 2 & 1\\ -2 & -1 & 1 & 2 \end{array}\right)=\left(\begin{array}{rrrr} 52 & 23 & -26 & -49\\ 23 & 52 & -49 & -26\newline -26 & -49 & 52 & 23\\ -49 & -26 & 23 & 52 \end{array}\right) $$ 
+ $$ 
+ K^1 =K^{1,11} +K^{1,22} =\left(\begin{array}{rrrr} 2 & -2 & -1 & 1\\ -2 & 2 & 1 & -1\\ -1 & 1 & 2 & -2\\ 1 & -1 & -2 & 2 \end{array}\right)+25\left(\begin{array}{rrrr} 2 & 1 & -1 & -2\\ 1 & 2 & -2 & -1\\ -1 & -2 & 2 & 1\\ -2 & -1 & 1 & 2 \end{array}\right)=\left(\begin{array}{rrrr} 52 & 23 & -26 & -49\\ 23 & 52 & -49 & -26\\ -26 & -49 & 52 & 23\\ -49 & -26 & 23 & 52 \end{array}\right) 
+ $$ 
 
 To compute the local stiffness matrix of $\Omega^2$ , we can use the explicit formula that apply when the element $\Omega^k$ is a right triangle, with local node $2$ placed at the right angle's vertex (see figure below) and the coefficients of the model equation are constants and equal to $a_{1,1}^k =a_{2,2}^k =c$ , $a_{1,2}^k =a_{2,1}^k =a_{0,0}^k =0$ . This formula has been discussed in class and can be found [in the notes of the FEM available at the *Numerical Factory*](https://numfactory.upc.edu/numfactory/subjects/FEM/FEM/theory/T2-MN-FEM2D.pdf), page 28:
 
@@ -45,7 +47,7 @@ To compute the local stiffness matrix of $\Omega^2$ , we can use the explicit fo
 
 Here $k=2$ is the number of the element, the length of the edge joining the local nodes $1$ and $2$ is $a=3$ , the length of the edge joining the nodes $2$ and $3$ is $b=1$ (see the sketch of the meshed domain above, and note also that the local node $2$ is at the right angle's vertex), and $c=48$ 
 
- $$ K^2 =\left(\begin{array}{rrr} 32 & -32 & 0\newline -32 & 50 & -18\newline 0 & -18 & 18 \end{array}\right) $$ 
+ $$ K^2 =\left(\begin{array}{rrr} 32 & -32 & 0\\ -32 & 50 & -18\\ 0 & -18 & 18 \end{array}\right) $$ 
 
 Therefore, the solution of part (a) is: $K_{2,3}^1 =-49$ , $k_{1,2}^2 =-32$ .
 
@@ -121,7 +123,7 @@ fprintf('(a) K1(2,3) = %f, K2(1,2) = %f\n',K1(2,3),K2(1,2))
 The global assembled matrix is:
 
 
- $K=\left(\begin{array}{ccccc} K_{1,1}^1  & K_{1,2}^1  & K_{1,3}^1  & 0 & K_{1,4}^1 \newline K_{2,1}^1  & K_{2,2}^1  & K_{2,3}^1  & 0 & K_{2,4}^1 \newline K_{3,1}^1  & K_{3,2}^1  & K_{3,3}^1 +K_{1,1}^2  & K_{1,2}^2  & K_{3,4}^1 +K_{1,3}^2 \newline 0 & 0 & K_{2,1}^2  & K_{2,2}^2  & K_{2,3}^2 \newline K_{4,1}^1  & K_{4,2}^1  & K_{4,3}^1 +K_{3,1}^2  & K_{3,2}^2  & K_{4,4}^1 +K_{3,3}^2  \end{array}\right)=\left(\begin{array}{rrrrr} 52 & 23 & -26 & 0 & -49\newline 23 & 52 & -49 & 0 & -26\newline -26 & -49 & 84 & -32 & 23\newline 0 & 0 & -32 & 50 & -18\newline -49 & -26 & 23 & -18 & 70 \end{array}\right)$ .
+ $K=\left(\begin{array}{ccccc} K_{1,1}^1  & K_{1,2}^1  & K_{1,3}^1  & 0 & K_{1,4}^1 \\ K_{2,1}^1  & K_{2,2}^1  & K_{2,3}^1  & 0 & K_{2,4}^1 \\ K_{3,1}^1  & K_{3,2}^1  & K_{3,3}^1 +K_{1,1}^2  & K_{1,2}^2  & K_{3,4}^1 +K_{1,3}^2 \\ 0 & 0 & K_{2,1}^2  & K_{2,2}^2  & K_{2,3}^2 \\ K_{4,1}^1  & K_{4,2}^1  & K_{4,3}^1 +K_{3,1}^2  & K_{3,2}^2  & K_{4,4}^1 +K_{3,3}^2  \end{array}\right)=\left(\begin{array}{rrrrr} 52 & 23 & -26 & 0 & -49\\ 23 & 52 & -49 & 0 & -26\\ -26 & -49 & 84 & -32 & 23\\ 0 & 0 & -32 & 50 & -18\\ -49 & -26 & 23 & -18 & 70 \end{array}\right)$ .
 
 
 Per tant $K_{3,5} =23$ .
