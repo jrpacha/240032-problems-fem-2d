@@ -47,7 +47,12 @@ To compute the local stiffness matrix of $\Omega^2$ , we can use the explicit fo
 
 Here $k=2$ is the number of the element, the length of the edge joining the local nodes $1$ and $2$ is $a=3$ , the length of the edge joining the nodes $2$ and $3$ is $b=1$ (see the sketch of the meshed domain above, and note also that the local node $2$ is at the right angle's vertex), and $c=48$ 
 
- $$ K^2 =\left(\begin{array}{rrr} 32 & -32 & 0\\\\ -32 & 50 & -18\\\\ 0 & -18 & 18 \end{array}\right) $$ 
+ $$ 
+ K^2 =\left(\begin{array}{rrr} 32 & -32 & 0\\\\
+ -32 & 50 & -18\\\\ 
+ 0 & -18 & 18 
+ \end{array}\right) 
+ $$ 
 
 Therefore, the solution of part (a) is: $K_{2,3}^1 =-49$ , $k_{1,2}^2 =-32$ .
 
